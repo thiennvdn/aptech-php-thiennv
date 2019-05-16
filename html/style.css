@@ -1,0 +1,15 @@
+.Frist-Container_Row_Frist-Div--height-100-px {
+  height: 100px;
+  background-color: aqua;
+}
+
+.Frist-Container_Row_Frist-Div--change-color:hover {
+  color: green !important;
+  text-align: center;
+}
+
+.Second-Container_Row_Second-Div--height-200-px {
+  height: 200px;
+  background-color: brown;
+}
+/*# sourceMappingURL=style.css.map */
