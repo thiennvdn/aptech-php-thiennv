@@ -30,10 +30,14 @@ var tableElement = document.createElement('table');
 var theadElement = document.createElement('thead');
 var tbodyElement= document.createElement('tbody');
 
+//tao function de lam border cho th, td
+function borderStyle() {
+    var styleBorder = document.createAttribute('style');
+    styleBorder.value = 'border: 1px solid black';
+    return styleBorder;
+}
 
-// var trhead = document.createElement('tr');
-// var trheadth = document.createElement('th');
-
+//tao function de tao element
 function create (nameOfElement){
     return document.createElement(nameOfElement);
 }
@@ -55,6 +59,9 @@ var trHead = create('tr');
 var arrayHeading = ['ID', 'Name', 'Email'];
 for (var i = 0; i < arrayHeading.length; i++) {
   var th = create('th');
+  // var styleBorder = document.createAttribute('style');
+  // styleBorder.value = 'border: 1px solid black';
+  th.setAttributeNode(borderStyle());
   th.appendChild(document.createTextNode(arrayHeading[i]));
   trHead.appendChild(th);
 }
@@ -65,16 +72,30 @@ theadElement.appendChild(trHead);
 
 for (var i = 0; i < data.users.length; i++) {
   var trBody = create('tr');
-  tbodyElement.appendChild(trBody);
+  // tbodyElement.appendChild(trBody);
   var arrayData = [data.users[i].id, data.users[i].name, data.users[i].email];
   for (var j = 0; j < arrayData.length; j++){
     var td = create('td');
+    // var styleBorder = document.createAttribute('style');
+    // styleBorder.value = 'border: 1px solid black';
+    td.setAttributeNode(borderStyle());
     td.appendChild(document.createTextNode(arrayData[j]));
     trBody.appendChild(td);
+    tbodyElement.appendChild(trBody);
   }
 }
 
 
 tableElement.appendChild(theadElement);
 tableElement.appendChild(tbodyElement);
+
+//tao border cho table
+
+var styleTable = document.createAttribute('style');
+styleTable.value = 'border-collapse: collapse';
+// styleTable.value = 'border: 1px solid black';
+tableElement.setAttributeNode(styleTable);
+
+
+
 document.body.appendChild(tableElement);
