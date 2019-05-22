@@ -1,0 +1,21 @@
+  #first-div {
+      height: 200px;
+      background-color: lightblue;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  #first-div_first {
+      background-color: blueviolet;
+      width: 40%;
+  }
+  #first-div_second {
+      background-color: blue;
+      width: 50%;
+  }
+  
+  .h-80 {
+      height: 80px;
+  }
