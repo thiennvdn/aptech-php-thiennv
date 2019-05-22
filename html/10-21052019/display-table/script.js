@@ -37,7 +37,7 @@ var tbodyElement= document.createElement('tbody');
 function create (nameOfElement){
     return document.createElement(nameOfElement);
 }
-var trhead = create('tr');
+var trHead = create('tr');
 // var trheadth1 = create('th');
 // var trheadth2 = create('th');
 // var trheadth3 = create('th');
@@ -50,11 +50,31 @@ var trhead = create('tr');
 // trhead.appendChild(trheadth2);
 // trhead.appendChild(trheadth3);
 
+//chay vong lap for de tao thead
+
+var arrayHeading = ['ID', 'Name', 'Email'];
+for (var i = 0; i < arrayHeading.length; i++) {
+  var th = create('th');
+  th.appendChild(document.createTextNode(arrayHeading[i]));
+  trHead.appendChild(th);
+}
+
+theadElement.appendChild(trHead);
+
+//chay vong lap for de tao tbody
+
+for (var i = 0; i < data.users.length; i++) {
+  var trBody = create('tr');
+  tbodyElement.appendChild(trBody);
+  var arrayData = [data.users[i].id, data.users[i].name, data.users[i].email];
+  for (var j = 0; j < arrayData.length; j++){
+    var td = create('td');
+    td.appendChild(document.createTextNode(arrayData[j]));
+    trBody.appendChild(td);
+  }
+}
 
 
-
-
-theadElement.appendChild(trhead);
 tableElement.appendChild(theadElement);
 tableElement.appendChild(tbodyElement);
 document.body.appendChild(tableElement);
