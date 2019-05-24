@@ -1,0 +1,8 @@
+{
+    "name": "Thien",
+    "age" : 20,
+    "email" : "vietthien211@gmail.com",
+    "interests": [
+        "football", "film", "traveling"
+    ]
+}
