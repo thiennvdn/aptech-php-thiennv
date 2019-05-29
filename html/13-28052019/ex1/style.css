@@ -1,0 +1,64 @@
+#firstSlide, #secondSlide, #thirdSlide {
+    height: 500px;
+    width: 100%;
+}
+
+#firstSlide {
+    background-image: url('bence-balla-schottner-1532414-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#secondSlide {
+    background-image: url('kellen-riggin-1547530-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#thirdSlide {
+    background-image: url('photo-1556798060-3d3c4e478d1e.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+#first-div {
+    background-image: url('bence-balla-schottner-1532414-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#second-div {
+    background-image: url('kellen-riggin-1547530-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#third-div {
+    background-image: url('photo-1556798060-3d3c4e478d1e.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
