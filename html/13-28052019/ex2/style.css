@@ -1,0 +1,22 @@
+#firstSlide, #secondSlide, #thirdSlide {
+    height: 500px;
+    width: 100%;
+}
+
+#firstSlide {
+    background-image: url('img-1.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+#secondSlide {
+    background-image: url('img-2.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+#thirdSlide {
+    background-image: url('img-3.jpeg');
+    background-size: cover;
+    background-position: center;
+}
