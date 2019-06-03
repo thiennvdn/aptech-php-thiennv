@@ -1,0 +1,53 @@
+#Bg-image {
+    background-image: url('img/bg-masthead.jpg');
+    background-size: cover;
+    background-position: center;
+    /* height: 500px; */
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+#firstImg {
+    background-image: url('img/bg-showcase-1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+}
+
+#secondImg {
+    background-image: url('img/bg-showcase-2.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+}
+
+#thirdImg {
+    background-image: url('img/bg-showcase-3.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+}
+
+#first-People-Img {
+    background-image: url('img/testimonials-1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 200px;
+}
+
+#second-People-Img {
+    background-image: url(img/testimonials-2.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 200px;
+}
+
+#third-People-Img {
+    background-image: url(img/testimonials-3.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 200px;
+}
