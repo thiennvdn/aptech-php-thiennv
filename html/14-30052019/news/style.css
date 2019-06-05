@@ -1,0 +1,14 @@
+.newsImage {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(50%);
+}
+
+#firstHotNewsImg {
+    background-image: url(images/1.jpg);
+}
+
+#secondHotNewsImg {
+    background-image: url(images/2.jpg);
+}
