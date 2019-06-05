@@ -5,10 +5,57 @@
     filter: brightness(50%);
 }
 
+.featureImg {
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(50%);
+}
+
 #firstHotNewsImg {
     background-image: url(images/1.jpg);
 }
 
 #secondHotNewsImg {
     background-image: url(images/2.jpg);
+}
+
+#firstFeatureImg {
+    background-image: url(images/3.jpg);
+}
+
+#secondFeatureImg {
+    background-image: url(images/4.jpg);
+}
+
+#thirdFeatureImg {
+    background-image: url(images/5.jpg);
+}
+
+#fourthFeatureImg {
+    background-image: url(images/6.jpg);
+}
+
+#fifthFeatureImg {
+    background-image: url(images/7.jpg);
+}
+
+#firstHotImg {
+    background-image: url(images/9.jpg);
+}
+
+#secondHotImg {
+    background-image: url(images/10.jpg);
+}
+
+#thirdHotImg {
+    background-image: url(images/11.jpg);
+}
+
+#fourthHotImg {
+    background-image: url(images/12.jpg);
+}
+
+#fifthHotImg {
+    background-image: url(images/8.jpg);
 }
