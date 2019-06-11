@@ -114,8 +114,8 @@
     );
 
     ?>
-    <table class="table table-bordered">
-        <thead>
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
             <tr>
                 <th>No.</th>
                 <th>Name</th>
