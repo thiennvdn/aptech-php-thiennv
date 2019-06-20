@@ -16,38 +16,22 @@
     <?php
         require "php-connect-mysql.php";
         $conn = connectDB();
-        $select = "SELECT * FROM ap_18_4.users";
-        $result = mysqli_query($conn, $select);
-        $arr = mysqli_fetch_all($result,MYSQLI_ASSOC);
-        // var_dump ($result);
-        // $a = [];
-        // var_dump("aa");
-        // var_dump($_POST);
-        // echo "<br>";
         $email = $_POST["email"];
         $password = $_POST["password"];
-        $a = count($arr);
-        var_dump($arr);
-        for ($i=0; $i < $a; $i++) { 
-            echo $arr[$i]["email"] . "<br>";
-        } 
-        // if ($email == $arr[$i]["email"] && $password == $arr[$i]["password"]) {
-        //     echo "Dang nhap thanh cong";
-        // } else {
-        //     echo "Dang nhap that bai";
-        // }
-        
-       
-    
-        
-        // if (mysqli_num_rows($result) > 0) {
-        //     // output data of each row
-        //     while($row = mysqli_fetch_assoc($result)) {
-        //         echo "Name: " . $row["name"]. " - Email: " . $row["email"]. " - Password: " . $row["password"]. "<br>";
-        //     }
-        // } else {
-        //     echo "0 results";
-        // }
+        $select = "SELECT * FROM ap_18_4.users WHERE email='$email' AND password = '$password'";
+        $result = mysqli_query($conn, $select);
+        $row = mysqli_num_rows($result);
+        // $arr = mysqli_fetch_all($result,MYSQLI_ASSOC); 
+        if ($row == 1) {
+            // $selectData = "SELECT * FROM ap_18_4.users";
+            // $resultData = mysqli_query($conn, $selectData);
+            // while($rowData = mysqli_fetch_assoc($resultData)) {
+            //     echo "Name: " . $rowData["name"]. " - Email: " . $rowData["email"]. " - Password: " . $rowData["password"]. "<br>";    
+            //     }
+            header("Location: welcome.php");
+            } else {
+            echo "Dang nhap that bai";
+            }
         
         mysqli_close($conn);
     ?>
