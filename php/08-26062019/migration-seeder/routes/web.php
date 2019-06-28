@@ -15,14 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/form-nguoi-dung', function() {
-    return 'Form-nguoi-dung';
-});
+Route::get('/form-nguoi-dung', 'UsersController@hienThiFormNguoiDung');
 
 Route::get('/hien-thi-tat-ca-nguoi-dung', 'UsersController@hienThiTatCa');
 
 Route::get('/hien-thi-mot-nguoi-dung/{idNguoiDung}', 'UsersController@hienThiMotNguoi');
 
-Route::get('/form-sua-nguoi-dung', function () {
-    return 'Form sua nguoi dung';
-});
+Route::get('/form-sua-nguoi-dung', 'UsersController@formSuaNguoiDung');
