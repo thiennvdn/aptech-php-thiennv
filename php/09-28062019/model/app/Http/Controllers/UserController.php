@@ -45,15 +45,15 @@ class UserController extends Controller
     }
 
     function store() {
+        // dd($_POST);
         $name = $_POST['name'];
         $email = $_POST['email'];
-        DB::table('users')->increment([
+        $password = $_POST['password'];
+        DB::table('users')->insert([
             'name' => $name,
-            'email' => $email
+            'email' => $email,
+            'password' => $password
         ]);
-        // $user->name = $request->name;
-        // $user->email = $request->email;
-        // $user->save();
         $users = DB::table('users')->get();
         return view('users.index', ['users' => $users]);
     }

@@ -1,5 +1,4 @@
-{{-- <form action="{{asset('users/store')}}" method="post">
-    @method('POST')
+<form action="{{asset('users/index')}}" method="post">
     @csrf
     <div>
         <label for="">Name</label>
@@ -9,7 +8,10 @@
         <label for="">Email</label>
         <input type="email" name="email" id="">
     </div>
-    <button type="submit">Update</button>
-</form> --}}
-<?php
-    echo 'hello';
+    <div>
+        <label for="">Password</label>
+        <input type="password" name="password" id="">
+    </div>
+    <button type="submit">Create New User</button>
+</form>
+
