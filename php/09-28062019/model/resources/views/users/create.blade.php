@@ -14,4 +14,7 @@
     </div>
     <button type="submit">Create New User</button>
 </form>
+<form action="{{asset('users/index')}}" method="get">
+    <button type="submit">Back</button>
+</form>
 
