@@ -37,12 +37,17 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $user = new User;
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'password' => 'required'
+        ]);
         $user->name = $request->name;
         $user->email = $request->email;
         $user->password = $request->password;
         $user->save();
 
-        return redirect()->route('users.index');
+        return redirect()->route('users.index')->with('success', 'New user created successfully');
     }
 
     /**
@@ -76,6 +81,10 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required'
+        ]);
         $user->name = $request->name;
         $user->email = $request->email;
         $user->save();

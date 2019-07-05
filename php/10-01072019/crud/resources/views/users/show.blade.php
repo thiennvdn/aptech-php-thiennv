@@ -12,7 +12,7 @@
                             <th scope="col">Password</th>
                             <th scope="col">Created Date</th>
                             <th scope="col">Updated Date</th>
-                            <th scope="col">Action</th>
+                            <th scope="col" colspan="">Action</th>
                         </tr>
                     </thead>
                     <tbody>
