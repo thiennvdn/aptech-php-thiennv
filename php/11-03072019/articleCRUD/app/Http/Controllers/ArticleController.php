@@ -85,10 +85,11 @@ class ArticleController extends Controller
     {
         $categories = Category::all();
         $cats = array();
-        foreach ($categories as $category) {
+        foreach ($article->categories as $category) {
             $cats[$category->id] = $category->name;
         }
-        return view('articles.edit', ['article' => $article, 'categories' => $cats]);
+
+        return view('articles.edit', ['article' => $article, 'categories' => $categories, 'cats' => $cats]);
     }
 
     /**
@@ -111,11 +112,11 @@ class ArticleController extends Controller
 
         $article->save();
 
-        // if (isset($request->categories)) {
-        //     $article->categories()->sync($request->categories);
-        // } else {
-        //     $article->categories()->sync(array());
-        // }
+        if (isset($request->categories)) {
+            $article->categories()->sync($request->categories);
+        } else {
+            $article->categories()->sync(array());
+        }
 
 
         return view('articles.show', ['article' => $article]);

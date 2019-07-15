@@ -25,7 +25,11 @@
                         <label for="categories" class="font-weight-bold">Category</label>
                         <select class="form-control select2-multi" id="categories" name="categories[]" multiple="multiple">
                             @foreach ($categories as $category)
-                                <option value="">{{$category}}</option>
+                                 <option value="{{$category->id}}"
+                                    @foreach ($cats as $cat)
+                                        {{$category->name == $cat ? 'selected' : ''}}
+                                    @endforeach
+                                   >{{$category->name}}</option>
                             @endforeach
                         </select>
                     </div>
@@ -55,6 +59,6 @@
     <script src="{{asset('js/select2.min.js')}}"></script>
     <script>
         $('.select2-multi').select2();
-        $('.select2-multi').select2().val({!! json_encode($article->categories()->allRelatedIds()) !!}).trigger('change');
+        //$('.select2-multi').select2().val({!! json_encode($article->categories()->allRelatedIds()) !!});
     </script>
 @endsection
