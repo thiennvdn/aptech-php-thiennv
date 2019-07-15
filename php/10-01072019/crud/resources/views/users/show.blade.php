@@ -23,7 +23,7 @@
                             <td>{{$user->password}}</td>
                             <td>{{$user->created_at}}</td>
                             <td>{{$user->updated_at}}</td>
-                            <td class="d-flex align-items-center">
+                            <td class="d-flex align-items-center justify-content-around">
                                 <form action="{{route('users.edit', $user->id)}}" method="get">
                                     <button type="submit" class="btn btn-sm  btn-warning mx-2">Edit</button>
                                 </form>
