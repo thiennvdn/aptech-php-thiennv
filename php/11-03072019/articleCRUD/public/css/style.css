@@ -1,0 +1,14 @@
+.Header--height {
+    height: 80px
+}
+
+.Intro--height{
+    height: 300px;
+}
+.Border--custom {
+    border-radius: 2rem !important;
+}
+
+.Font--custom {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+}

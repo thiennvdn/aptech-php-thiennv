@@ -29,6 +29,7 @@
                                     @foreach ($cats as $cat)
                                         {{$category->name == $cat ? 'selected' : ''}}
                                     @endforeach
+                                    {{-- {{$category->name == 'Food' ? 'selected' : ''}} --}}
                                    >{{$category->name}}</option>
                             @endforeach
                         </select>

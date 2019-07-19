@@ -59,7 +59,8 @@ class ArticleController extends Controller
         // $a->article_id = $article->id;
         // $a->save();
 
-        $article->categories()->sync($request->categories, false);
+        //$article->categories()->sync($request->categories, false);
+        $article->categories()->attach($request->categories);
 
         return view('articles.show', ['article' => $article]);
     }

@@ -16,6 +16,11 @@ Route::get('/', function () {
 });
 
 
+Route::get('/home', 'HomeController@index')->name('home.index');
+Route::get('/home/{slug}', 'HomeController@show')->name('home.show');
+Route::get('/home/category/{name}', 'HomeController@showCategory')->name('home.showCategory');
+
+
 Route::resource('articles', 'ArticleController');
 
 Route::resource('categories', 'CategoryController');
