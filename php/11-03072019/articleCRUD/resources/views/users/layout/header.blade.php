@@ -21,7 +21,7 @@
         <div class="col-12 d-block d-md-none">
             <div class="navbar collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
+                    {{--  <li class="nav-item">
                         <a class="nav-link text-dark" href="#">News</a>
                     </li>
                     <li class="nav-item">
@@ -35,7 +35,12 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark" href="#">Music</a>
-                    </li>
+                    </li>  --}}
+                    @foreach ($categories as $category)
+                        <li class="nav-item">
+                            <a class="nav-link text-muted" href="{{route('home.showCategory', $category->name)}}">{{$category->name}}</a>
+                        </li>
+                    @endforeach
                 </ul>
             </div>
         </div>
@@ -46,11 +51,14 @@
     <div class="row">
         <div class="col-md-12 d-md-block d-none ">
             <nav class="nav d-flex justify-content-between">
-                <a class="nav-link text-muted" href="#">News</a>
+                {{--  <a class="nav-link text-muted" href="#">News</a>
                 <a class="nav-link text-muted" href="#">Sport</a>
                 <a class="nav-link text-muted" href="#">Food</a>
                 <a class="nav-link text-muted" href="#">Travel</a>
-                <a class="nav-link text-muted" href="#">Music</a>
+                <a class="nav-link text-muted" href="#">Music</a>  --}}
+                @foreach ($categories as $category)
+                    <a class="nav-link text-muted" href="{{route('home.showCategory', $category->name)}}">{{$category->name}}</a>
+                @endforeach
             </nav>
         </div>
     </div>

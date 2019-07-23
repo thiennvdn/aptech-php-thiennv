@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
   </head>
   <body>
-    {{--  @include('users.layout.header')  --}}
+    @include('users.layout.header')
 
     @section('content')
 
